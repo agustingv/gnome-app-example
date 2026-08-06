@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="ExampleMainWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">Example Application</property>
+    <property name="default-width">600</property>
+    <property name="default-height">400</property>
+    <child>
+      <object class="GtkLabel" id="label">
+        <property name="label" translatable="yes">Hello, World!</property>
+      </object>
+    </child>
+  </template>
+</interface>

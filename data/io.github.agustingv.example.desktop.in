@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Example
+Exec=Example
+Icon=io.github.agustingv.example
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true
