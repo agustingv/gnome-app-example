@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/io/github/agustingv/example">
     <file preprocess="xml-stripblanks">ui/main-window.ui</file>
+    <file preprocess="xml-stripblanks">ui/item-row.ui</file>
   </gresource>
 </gresources>

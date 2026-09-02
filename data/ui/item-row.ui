@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+
+  <template class="ExampleItemRow" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <property name="spacing">4</property>
+    <property name="margin-start">12</property>
+    <property name="margin-end">12</property>
+    <property name="margin-top">8</property>
+    <property name="margin-bottom">8</property>
+
+    <child>
+      <object class="GtkLabel" id="title_label">
+        <property name="xalign">0</property>
+        <property name="ellipsize">end</property>
+        <style><class name="heading"/></style>
+        <binding name="label">
+          <lookup name="title" type="ExampleItem">
+            <lookup name="item">ExampleItemRow</lookup>
+          </lookup>
+        </binding>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkLabel" id="description_label">
+        <property name="xalign">0</property>
+        <property name="ellipsize">end</property>
+        <style><class name="dim-label"/><class name="caption"/></style>
+        <binding name="label">
+          <lookup name="description" type="ExampleItem">
+            <lookup name="item">ExampleItemRow</lookup>
+          </lookup>
+        </binding>
+      </object>
+    </child>
+
+  </template>
+</interface>
