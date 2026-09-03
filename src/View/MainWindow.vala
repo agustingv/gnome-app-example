@@ -15,7 +15,7 @@ namespace Example {
         {
             foreach (var item in view_model.items)
             {
-                item_list.insert (new ItemRow (item), -1);
+                item_list.insert(new ItemRow (item), -1);
             }
         }
 

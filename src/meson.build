@@ -15,8 +15,8 @@ config_vala = configure_file(
 )
 
 sources = files(
-  'Application/main.vala',
-  'Application/application.vala',
+  'Application/Main.vala',
+  'Application/Application.vala',
   'Model/Item.vala',
   'Services/Services.vala',
   'Services/ImplRemoteFeedService.vala',
