@@ -6,7 +6,7 @@ resources = gnome.compile_resources(
 )
 
 config_vala = configure_file(
-  input:  'config.vala.in',
+  input:  'Application/config.vala.in',
   output: 'config.vala',
   configuration: {
     'GETTEXT_PACKAGE': meson.project_name(),
@@ -15,12 +15,21 @@ config_vala = configure_file(
 )
 
 sources = files(
-  'main.vala',
-  'application.vala',
-  'main-window.vala'
+  'Application/Main.vala',
+  'Application/Application.vala',
+  'Model/Item.vala',
+  'Services/Services.vala',
+  'Services/ImplRemoteFeedService.vala',
+  'Repository/Repository.vala',
+  'Repository/ImplRepositoryOne.vala',
+  'Repository/DummyRepository.vala',
+  'ViewModel/ItemListViewModel.vala',
+  'View/MainWindow.vala',
+  'View/ItemRow.vala'
 ) + [config_vala]
 
 dependencies = [
+  dependency('gee-0.8'),
   dependency('gtk4'),
   dependency('libadwaita-1', version: '>= 1.4'),
   dependency('gmodule-2.0'),
