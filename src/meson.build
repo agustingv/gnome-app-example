@@ -19,13 +19,15 @@ sources = files(
   'Application/Application.vala',
   'Model/Item.vala',
   'Services/Services.vala',
+  'Services/HttpClient.vala',
   'Services/ImplRemoteFeedService.vala',
   'Repository/Repository.vala',
   'Repository/ImplRepositoryOne.vala',
   'Repository/DummyRepository.vala',
   'ViewModel/ItemListViewModel.vala',
   'View/MainWindow.vala',
-  'View/ItemRow.vala'
+  'View/ItemRow.vala',
+  '../vapi/soup-example.vapi'
 ) + [config_vala]
 
 dependencies = [
@@ -33,6 +35,7 @@ dependencies = [
   dependency('gtk4'),
   dependency('libadwaita-1', version: '>= 1.4'),
   dependency('gmodule-2.0'),
+  dependency('libsoup-3.0'),
   meson.get_compiler('c').find_library('m', required: false),
 ]
 
