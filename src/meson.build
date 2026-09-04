@@ -18,6 +18,7 @@ sources = files(
   'Application/Main.vala',
   'Application/Application.vala',
   'Model/Item.vala',
+  'Util/HtmlMarkup.vala',
   'Services/Services.vala',
   'Services/HttpClient.vala',
   'Services/XmlValidator.vala',
