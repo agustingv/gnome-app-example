@@ -20,10 +20,12 @@ sources = files(
   'Model/Item.vala',
   'Services/Services.vala',
   'Services/HttpClient.vala',
+  'Services/XmlValidator.vala',
+  'Services/RssFeedParser.vala',
   'Services/ImplRemoteFeedService.vala',
   'Repository/Repository.vala',
-  'Repository/ImplRepositoryOne.vala',
   'Repository/DummyRepository.vala',
+  'Repository/RemoteFeedRepository.vala',
   'ViewModel/ItemListViewModel.vala',
   'View/MainWindow.vala',
   'View/ItemRow.vala',
@@ -36,6 +38,7 @@ dependencies = [
   dependency('libadwaita-1', version: '>= 1.4'),
   dependency('gmodule-2.0'),
   dependency('libsoup-3.0'),
+  dependency('libxml-2.0'),
   meson.get_compiler('c').find_library('m', required: false),
 ]
 

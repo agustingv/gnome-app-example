@@ -6,7 +6,7 @@ namespace Example
 	{
 		public ArrayList<Item> items { get; private set; default = new ArrayList<Item> (); }
 
-		private Service service = new ImplRemoteFeedService (new DummyRepository ());
+		private Service service = new ImplRemoteFeedService (new RemoteFeedRepository("https://news.google.com/rss?hl=es&gl=ES&ceid=ES:es"));
 
 		construct
 		{
