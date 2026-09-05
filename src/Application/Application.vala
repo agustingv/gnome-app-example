@@ -27,6 +27,7 @@ namespace Example
 
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("/io/github/agustingv/example/ui/css/style.css");
+            //TODO: revisar StyleContext deprecated since Gtk 4.10
             Gtk.StyleContext.add_provider_for_display (
                 Gdk.Display.get_default (),
                 provider,
