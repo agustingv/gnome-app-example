@@ -5,16 +5,13 @@
   <template class="ExampleItemRow" parent="GtkBox">
     <property name="orientation">vertical</property>
     <property name="spacing">4</property>
-    <property name="margin-start">12</property>
-    <property name="margin-end">12</property>
-    <property name="margin-top">8</property>
-    <property name="margin-bottom">8</property>
+    <style><class name="item-row"/></style>
 
     <child>
       <object class="GtkLabel" id="title_label">
         <property name="xalign">0</property>
         <property name="ellipsize">end</property>
-        <style><class name="heading"/></style>
+        <style><class name="title-3"/></style>
         <binding name="label">
           <lookup name="title" type="ExampleItem">
             <lookup name="item">ExampleItemRow</lookup>
@@ -24,12 +21,18 @@
     </child>
 
     <child>
-      <object class="GtkLabel" id="description_label">
+      <object class="GtkSeparator">
+        <property name="orientation">horizontal</property>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkLabel" id="pub_date_label">
         <property name="xalign">0</property>
         <property name="ellipsize">end</property>
         <style><class name="dim-label"/><class name="caption"/></style>
         <binding name="label">
-          <lookup name="description" type="ExampleItem">
+          <lookup name="pubDate" type="ExampleItem">
             <lookup name="item">ExampleItemRow</lookup>
           </lookup>
         </binding>

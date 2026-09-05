@@ -1,0 +1,31 @@
+list row.item-row {
+  padding: 4px 0;
+}
+
+.item-row {
+  border-radius: 12px;
+  margin: 4px 8px;
+  padding: 8px 12px;
+  transition: background-color 150ms ease;
+}
+
+.item-row .title-3 {
+  font-weight: 600;
+}
+
+.item-row separator {
+  margin: 6px 0 4px 0;
+  opacity: 0.5;
+}
+
+.item-row .caption {
+  opacity: 0.7;
+}
+
+row:hover .item-row {
+  background-color: alpha(currentColor, 0.05);
+}
+
+row:selected .item-row {
+  background-color: alpha(@accent_bg_color, 0.15);
+}

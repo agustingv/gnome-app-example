@@ -3,5 +3,6 @@
   <gresource prefix="/io/github/agustingv/example">
     <file preprocess="xml-stripblanks">ui/main-window.ui</file>
     <file preprocess="xml-stripblanks">ui/item-row.ui</file>
+    <file>ui/css/style.css</file>
   </gresource>
 </gresources>
